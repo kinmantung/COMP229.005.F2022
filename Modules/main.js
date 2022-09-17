@@ -4,6 +4,13 @@
 //confirm.log("multply : " + multply(84,2));
 
 // doSomgthing example
-import doSomgthing from '/lib.js';
+//import doSomgthing from '/lib.js';
 
-doSomgthing();
+//doSomgthing();
+
+import {flag, touch } from "./validor.js";
+console.log(flag);//false
+touch(); // change to true
+console.log(flag); //true
+flag = false; //change to false
+console.log(flag); //error
