@@ -33,4 +33,13 @@ router.get('/contact', function(req, res, next) {
     );
 });
 
+router.get('/services', function(req, res, next) {
+  res.render('projectsservices',
+   {
+     title: 'Services', 
+     name: 'Julio'
+    }
+    );
+});
+
 module.exports = router;
