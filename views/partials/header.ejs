@@ -1,6 +1,10 @@
+<!-- Student ID: 301216721
+Name: Kin Man Tung
+Date: 8/10/2022 -->
 <!DOCTYPE html>
 <html>
   <head>
+    <img src="/images/nameLogo.png">
     <title><%= title %></title>
     <link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
@@ -32,23 +36,16 @@
       </li>
       <li class="nav-item">
         <% if(title == "About Me"){ %>
-        <a class="nav-link active" href="/about">About Me</a>
+        <a class="nav-link active" href="/aboutme">About Me</a>
         <% }else{ %>
-        <a class="nav-link" href="/about">About Me</a>
+        <a class="nav-link" href="/aboutme">About Me</a>
         <% } %>
       </li>
       <li class="nav-item">
-        <% if(title == "Contact"){ %>
-        <a class="nav-link active" href="/contact">Contact</a>
+        <% if(title == "Contact Me"){ %>
+        <a class="nav-link active" href="/contactme">Contact Me</a>
         <% }else{ %>
-        <a class="nav-link" href="/contact">Contact</a>
-        <% } %>
-      </li>
-      <li class="nav-item">
-        <% if(title == "Julio"){ %>
-        <a class="nav-link active" href="/users/julio">User</a>
-        <% }else{ %>
-        <a class="nav-link" href="/users/julio">User</a>
+        <a class="nav-link" href="/contactme">Contact Me</a>
         <% } %>
       </li>
     </ul>

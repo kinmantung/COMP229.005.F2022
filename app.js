@@ -1,6 +1,6 @@
 // Student ID: 301216721
 // Name: Kin Man Tung
-// Date
+// Date: 8/10/2022
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -8,7 +8,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 const { toUSVString } = require('util')
 
 var app = express();
@@ -25,7 +24,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

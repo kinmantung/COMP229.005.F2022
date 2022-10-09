@@ -1,0 +1,38 @@
+<!-- Student ID: 301216721
+Name: Kin Man Tung
+Date: 8/10/2022 -->
+<% include partials/header.ejs%>
+
+<!-- Type some information of me -->
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %> page</p>
+    <P>Phone: +1 (437) 982 6637</P>
+    <p>Email: tyronetung1206@gmail.com</p>
+
+    <!-- Create a form -->
+    <form action="" method="get" class="firstName">
+        <div class="firstName">
+          <label for="firstName">Enter your first name: </label>
+          <input type="text" name="firstName" id="firstName" required>
+        </div>
+        <div class="LastName">
+            <label for="LastName">Enter your last name: </label>
+            <input type="text" name="LastName" id="LastName" required>
+          </div>
+        <div class="email">
+          <label for="email">Enter your email: </label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        <div class="phoneNumber">
+            <label for="phoneNumber">Enter your phone number: </label>
+            <input type="phone" name="phoneNumber" id="phoneNumber" required>
+          </div>
+        <div class="submit">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+      <a href="/">
+        <button class="button2">Home</button>
+    </a>
+
+    <% include partials/footer.ejs%>
