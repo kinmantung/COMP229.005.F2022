@@ -3,6 +3,7 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/bootstrap/dist/css/bootstrap.min.css' />
+    <link rel="stylesheet" href="/@fortawesome/fontawesome-free/css/all.css">
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
@@ -11,17 +12,23 @@
     <ul class="nav nav-tabs">
       <li class="nav-item">
         <% if(title == "Home"){ %>
-        <a class="nav-link active" href="/">Home</a>
+        <a class="nav-link active" href="/">
         <% }else{ %>
-        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/">
         <% } %>
+        <i class="fas fa-home"></i>
+          Home
+        </a>
       </li>
       <li class="nav-item">
         <% if(title == "Projects"){ %>
-        <a class="nav-link active" href="/projects">Projects</a>
+        <a class="nav-link active" href="/projects">
         <% }else{ %>
-        <a class="nav-link" href="/projects">Projects</a>
+        <a class="nav-link" href="/projects">
         <% } %>
+        <i class="fas fa-diagram-project"></i> 
+          Projects
+        </a>
       </li>
       <li class="nav-item">
         <% if(title == "Services"){ %>
@@ -35,6 +42,13 @@
         <a class="nav-link active" href="/about">About Me</a>
         <% }else{ %>
         <a class="nav-link" href="/about">About Me</a>
+        <% } %>
+      </li>
+      <li class="nav-item">
+        <% if(title == "Inventory List"){ %>
+        <a class="nav-link active" href="/inventory/list">Inventory List</a>
+        <% }else{ %>
+        <a class="nav-link" href="/inventory/list">Inventory List</a>
         <% } %>
       </li>
       <li class="nav-item">
