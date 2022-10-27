@@ -8,6 +8,7 @@ var dbConfig = require('./config/db');
 var app = require('./config/app');
 var debug = require('debug')('comp229.005.f2022:server');
 var http = require('http');
+var passportConfig = require('./config/passport');
 const { Console } = require('console');
 
 /**
@@ -26,7 +27,7 @@ var server = http.createServer(app);
 /**
  * Listen on provided port, on all network interfaces.
  */
-
+let passport = passportConfig();
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
