@@ -8,7 +8,7 @@ router.get('/', indexController.home);
 // Renders the projects page
 router.get('/', indexController.home);
 
-router.get('/about', indexController.about);
+router.get('/aboutme', indexController.about);
 
 router.get('/projects', indexController.projects);
 

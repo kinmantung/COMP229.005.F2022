@@ -1,17 +1,15 @@
+// Student ID: 301216721
+// Name: Kin Man Tung
+// Date: 28/10/2022
+
 let mongoose = require('mongoose');
 
 // Create a model class
 let inventoryModel = mongoose.Schema(
     {
         item: String,
-        qty: Number,
-        tags: [],
-        status: String,
-        size: {
-            h: Number,
-            w: Number,
-            uom: String
-        }
+        contactNum: Number,
+        email: String,
     },
     {
         collection: "inventory"
