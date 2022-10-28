@@ -1,3 +1,7 @@
+// Student ID: 301216721
+// Name: Kin Man Tung
+// Date: 28/10/2022
+
 // create a reference to the model
 let Inventory = require('../models/inventory.model');
 
@@ -12,12 +16,12 @@ exports.inventoryList = function(req, res, next) {
         else
         {
             res.render('inventory/list', {
-                title: 'Inventory List', 
+                title: 'Business Contact List', 
                 InventoryList: inventoryList,
                 userName: req.user ? req.user.username : ''
             })            
         }
-    });
+    }).sort({item:1});
 }
 
 
@@ -49,14 +53,9 @@ module.exports.processEditPage = (req, res, next) => {
     let updatedItem = Inventory({
         _id: req.body.id,
         item: req.body.item,
-        qty: req.body.qty,
-        status: req.body.status,
-        size : {
-            h: req.body.size_h,
-            w: req.body.size_w,
-            uom: req.body.size_uom,
-        },
-        tags: req.body.tags.split(",").map(word => word.trim())
+        contactNum: req.body.contactNum,
+        email: req.body.email,
+        
     });
 
     // console.log(updatedItem);
@@ -91,14 +90,8 @@ module.exports.processAddPage = (req, res, next) => {
     let newItem = Inventory({
         _id: req.body.id,
         item: req.body.item,
-        qty: req.body.qty,
-        status: req.body.status,
-        size : {
-            h: req.body.size_h,
-            w: req.body.size_w,
-            uom: req.body.size_uom,
-        },
-        tags: req.body.tags.split(",").map(word => word.trim())
+        contactNum: req.body.contactNum,
+        email: req.body.email,
     });
 
     Inventory.create(newItem, (err, item) =>{

@@ -1,3 +1,7 @@
+    <!-- Student ID: 301216721
+    Name: Kin Man Tung
+    Date: 27/10/2022  -->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -32,44 +36,63 @@
       </li>
       <li class="nav-item">
         <% if(title == "Services"){ %>
-        <a class="nav-link active" href="/services">Services</a>
+        <a class="nav-link active" href="/services">
         <% }else{ %>
-        <a class="nav-link" href="/services">Services</a>
+        <a class="nav-link" href="/services">
         <% } %>
+        <i class="fa-sharp fa-solid fa-bookmark"></i>
+          Services
+        </a>
       </li>
       <li class="nav-item">
         <% if(title == "About Me"){ %>
-        <a class="nav-link active" href="/about">About Me</a>
+        <a class="nav-link active" href="/aboutme">
         <% }else{ %>
-        <a class="nav-link" href="/about">About Me</a>
+        <a class="nav-link" href="/aboutme">
         <% } %>
-      </li>
-      <li class="nav-item">
-        <% if(title == "Inventory List"){ %>
-        <a class="nav-link active" href="/inventory/list">Inventory List</a>
-        <% }else{ %>
-        <a class="nav-link" href="/inventory/list">Inventory List</a>
-        <% } %>
+        <i class="fa-sharp fa-solid fa-circle-user"></i>
+        About Me
+        </a>
       </li>
       <li class="nav-item">
         <% if(title == "Contact"){ %>
-        <a class="nav-link active" href="/contact">Contact</a>
+        <a class="nav-link active" href="/contact">
         <% }else{ %>
-        <a class="nav-link" href="/contact">Contact</a>
+        <a class="nav-link" href="/contact">
         <% } %>
+        <i class="fa-sharp fa-solid fa-phone"></i>
+        Contact
+        </a>
       </li>
       <li class="nav-item">
-        <% if(title == "Julio"){ %>
-        <a class="nav-link active" href="/users/julio">User</a>
+        <% if(title == "Inventory List"){ %>
+        <a class="nav-link active" href="/inventory/list">
         <% }else{ %>
-        <a class="nav-link" href="/users/julio">User</a>
+        <a class="nav-link" href="/inventory/list">
         <% } %>
+        <i class="fa-sharp fa-solid fa-list"></i>
+        Business Contacts List</a>
       </li>
       <li class="nav-item">  
         <% if (typeof userName == 'string' && userName) { %>
-          <a class="nav-link" href="/users/signout" onclick="return confirm('Are you sure?')">Sign Out (<%= userName %>)</a>
+          <a class="nav-link" href="/users/signout" onclick="return confirm('Are you sure?')">
+            <i class="fa-sharp fa-solid fa-share-from-square"></i>
+            Sign Out (<%= userName %>)
+          </a>
         <% } else { %>
-          <a class="nav-link" href="/users/signin">Signin</a>
+          <a class="nav-link" href="/users/signin">
+            <i class="fa-sharp fa-solid fa-users"></i>
+            Sign-in
+          </a>
+        <% } %>            
+      </li> 
+      <li class="nav-item">  
+        <% if (typeof userName == 'string' && userName) { %>
+        <% } else { %>
+          <a class="nav-link" href="/users/signup">
+            <i class="fas fa-user-plus"></i>
+            Sign-up
+          </a>
         <% } %>            
       </li> 
     </ul>

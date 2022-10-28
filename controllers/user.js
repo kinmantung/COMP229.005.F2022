@@ -1,3 +1,7 @@
+// Student ID: 301216721
+// Name: Kin Man Tung
+// Date: 28/10/2022
+
 let User = require('../models/user');
 let passport = require('passport');
 

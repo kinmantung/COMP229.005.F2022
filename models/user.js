@@ -1,3 +1,7 @@
+// Student ID: 301216721
+// Name: Kin Man Tung
+// Date: 28/10/2022
+
 let mongoose = require('mongoose');
 let crypto = require('crypto');
 let Schema = mongoose.Schema;

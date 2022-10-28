@@ -1,5 +1,9 @@
+// Student ID: 301216721
+// Name: Kin Man Tung
+// Date: 28/10/2022
+
 exports.home = function(req, res, next) {
-    res.render('index',
+    res.render('home',
      { 
         title: 'Home',
         userName: req.user ? req.user.username : ''
@@ -8,7 +12,7 @@ exports.home = function(req, res, next) {
   };
 
 exports.projects = function(req, res, next) {
-    res.render('index',
+    res.render('projects',
      {
        title: 'Projects', 
        userName: req.user ? req.user.username : ''
@@ -17,28 +21,28 @@ exports.projects = function(req, res, next) {
   };
 
   exports.about = function(req, res, next) {
-    res.render('index',
+    res.render('aboutme',
      {
        title: 'About Me', 
-       name: 'Julio'
+       userName: req.user ? req.user.username : ''
       }
       );
   };
 
   exports.contact = function(req, res, next) {
-    res.render('index',
+    res.render('contact',
      {
        title: 'Contact', 
-       name: 'Julio'
+       userName: req.user ? req.user.username : ''
       }
       );
   };
 
   exports.services = function(req, res, next) {
-    res.render('projectsservices',
+    res.render('services',
      {
        title: 'Services', 
-       name: 'Julio'
+       userName: req.user ? req.user.username : ''
       }
       );
   }

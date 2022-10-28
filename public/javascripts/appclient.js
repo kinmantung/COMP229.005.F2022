@@ -1,3 +1,7 @@
+// Student ID: 301216721
+// Name: Kin Man Tung
+// Date: 28/10/2022
+
 console.log("It goes to the client-side.");
 
 if(getTitle == "Inventory List")

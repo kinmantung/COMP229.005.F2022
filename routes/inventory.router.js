@@ -15,7 +15,7 @@ function requireAuth(req, res, next)
 }
 
 /* GET users listing. */
-router.get('/list', inventoryController.inventoryList);
+router.get('/list', requireAuth, inventoryController.inventoryList);
 
 // Routers for edit
 router.get('/edit/:id', requireAuth, inventoryController.displayEditPage);
