@@ -6,6 +6,9 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var session = require('express-session');
+let flash = require('connect-flash');
+let passport = require('passport');
 
 var indexRouter = require('../routes/index');
 var usersRouter = require('../routes/users');
@@ -14,6 +17,12 @@ const inventoryModel = require('../models/inventory.model');
 const { toUSVString } = require('util')
 
 var app = express();
+
+app.use(session({
+  saveUninitialized: true,
+  resave: true,
+  secret: "sessionSecret"
+}));
 
 // view engine setup
 app.set('views', path.join(__dirname, '../views'));
@@ -25,6 +34,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.static(path.join(__dirname, '../node_modules')));
+
+// Sets up passport
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

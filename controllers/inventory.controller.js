@@ -13,7 +13,8 @@ exports.inventoryList = function(req, res, next) {
         {
             res.render('inventory/list', {
                 title: 'Inventory List', 
-                InventoryList: inventoryList
+                InventoryList: inventoryList,
+                userName: req.user ? req.user.username : ''
             })            
         }
     });
@@ -34,7 +35,8 @@ module.exports.displayEditPage = (req, res, next) => {
             //show the edit view
             res.render('inventory/add_edit', {
                 title: 'Edit Item', 
-                item: itemToEdit
+                item: itemToEdit,
+                userName: req.user ? req.user.username : ''
             })
         }
     });
@@ -80,7 +82,8 @@ module.exports.displayAddPage = (req, res, next) => {
 
     res.render('inventory/add_edit', {
         title: 'Add a new Item',
-        item: newItem
+        item: newItem,
+        userName: req.user ? req.user.username : ''
     })          
 }
 
